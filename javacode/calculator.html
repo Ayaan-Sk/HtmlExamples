@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <label for="">First Number</label>
+    <input type="number" name="fst" id="fst" placeholder="First number">
+
+    <label for="">Second Number</label>
+    <input type="number" name="snd" id="snd" placeholder="second number">
+
+    <button onclick="calculate('+')"> + </button>
+    <button onclick="calculate('-')"> - </button>
+    <button onclick="calculate('*')"> * </button>
+    <button onclick="calculate('/')"> / </button>
+
+    <p id="result">Result:  </p>
+
+    <script>
+
+        function calculate(operator) {
+
+            const num1 = parseFloat(document.getElementById("fst").value);
+            const num2 = parseFloat(document.getElementById("snd").value);
+
+            let result;
+
+            switch (operator) 
+            {
+                case '+': result = num1 + num2;
+                break;
+
+                 case '-': result = num1 - num2;
+                break;
+
+                 case '*': result = num1 * num2;
+                break;
+
+                 case '/': result = num1 / num2;
+                break;
+            }
+      
+
+        document.getElementById("result").innerText = "Result:" + result;
+        }
+
+    </script>
+</body>
+</html>

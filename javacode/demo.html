@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mouse and Keyboard Event program</h1>
+
+    <div id="box">Click me</div>
+    <div id="key">Press Any Key</div>
+
+    <script>
+
+        const box1 = document.getElementById("box");
+const key1 = document.getElementById("key");
+
+box1.addEventListener("click" , function (){
+    box1.innerText= "Mouse Clicked";
+})
+
+document.addEventListener("keydown", function () {
+    key1.innerText = `Key Pressed: `;
+});
+    </script>
+</body>
+</html>

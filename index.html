@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="/style.css">
+
+
+</head>
+<body>
+     <div class="Header">
+        
+        <div class="nav">
+           <a href="www.google.com">Home</a>
+        </div>
+
+        <div class="nav">
+           <a href="www.google.com">Search</a>
+        </div>
+
+        <div class="nav">
+           <a href="www.instagram.com">about</a>
+        </div>
+
+        <div class="nav">
+           <a href="www.google.com">contact</a>
+        </div>
+
+        <div class="nav">
+           <a href="www.google.com">Feedback</a>
+        </div>
+
+    </div>
+
+    <div class="hero">
+     
+      <div class="hero_text">
+         <h1>Hi, I Am Ayaan</h1>
+         <p>I am a Coder,Developer, etc</p>
+      </div>
+
+      <div class="hero_image">
+          <img src="/mypic.jpg" alt="mypic">  
+      </div>
+    </div>
+
+    <section class="contact">
+         <h2>Contact Me</h2>
+         <form id="contact_form" class="contact_form" method="post">
+            <input id="contact_name" type="text" name="name" placeholder="enter your name" required>
+            <input id="contact_email" type="email" name="email" placeholder="Enter you Email" required>
+            <textarea id="contact_msg" name="message" placeholder="message" rows="5"></textarea>
+            
+            <button type="submit">Send Message</button>
+         </form>
+        
+    
+      
+
+      </section>
+
+
+
+    <script>
+      const form = document.getElementById("contact_form");
+      form.addEventListener("submit", function(event){
+         event.preventDefault();
+
+         const name = document.getElementById("contact_name").value;
+         const email = document.getElementById("contact_email").value;
+         const desc = document.getElementById("contact_msg").value;
+
+         alert("Thank you" + name + "We have recieved your message");
+
+         form.reset();
+      });
+    </script>
+    
+</body>
+</html>
